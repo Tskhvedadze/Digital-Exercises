@@ -1,0 +1,9 @@
+a {
+    all: unset;
+    cursor: pointer;
+    margin: 10px;
+}
+
+a:hover {
+    color: #ff440087;
+}
