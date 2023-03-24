@@ -24,6 +24,7 @@ const FilterUsers = () => {
                     {data?.data.users.map((user) => {
                         return (
                             <li
+                                key={user.id}
                                 style={{
                                     listStyle: 'none',
                                     fontSize: '20px',
