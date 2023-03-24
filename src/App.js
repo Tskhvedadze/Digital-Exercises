@@ -3,10 +3,10 @@ import SearchUsers from './view/SearchUsers/SearchUsers'
 
 function App() {
     return (
-        <>
-            {/* <SearchUsers /> */}
+        <div style={{ display: 'flex' }}>
+            <SearchUsers />
             <FilterUsers />
-        </>
+        </div>
     )
 }
 

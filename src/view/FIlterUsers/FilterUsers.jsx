@@ -3,17 +3,16 @@ import { useState } from 'react'
 import { Input, Loading } from '../../components'
 import useFetch from '../../hooks/useFetch'
 const FilterUsers = () => {
-    const [firstName, setFirstName] = useState('Mavis')
+    const [firstName, setFirstName] = useState('')
 
     const { loading, error, data } = useFetch({
         url: `https://dummyjson.com/users/filter?key=firstName&value=${firstName}`,
     })
 
-    console.log(data?.data.users)
     return (
         <>
             <Input
-                placeholder='Search'
+                placeholder='FIlter By Name'
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
             />
@@ -24,8 +23,18 @@ const FilterUsers = () => {
                 <ul>
                     {data?.data.users.map((user) => {
                         return (
-                            <li>
-                                {user.firstName} {user.lastName}
+                            <li
+                                style={{
+                                    listStyle: 'none',
+                                    fontSize: '20px',
+                                    color: 'brown',
+                                    border: '1px solid black',
+                                    padding: '4px 7px 4px 7px ',
+                                    borderRadius: '8px',
+                                    textAlign: 'center',
+                                }}
+                            >
+                                {user.firstName} {user.lastName} AGE: {user.age}
                             </li>
                         )
                     })}
