@@ -4,7 +4,7 @@ import './PageNotFound.css'
 const PageNotFound = () => {
     return (
         <>
-            <div className='container'>
+            <div className='not__found__container'>
                 <h2 className='title'>PageNotFound 404</h2>
                 <NavLink className='link' to='/'>
                     Home Page
