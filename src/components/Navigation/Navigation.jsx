@@ -1,12 +1,22 @@
-import { Link } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 import './Navigation.css'
 
 export const Navigation = () => {
     return (
-        <nav>
-            <Link to='/'>Home</Link>
-            <Link to='post'> Posts</Link>
-        </nav>
+        <>
+            <nav className='link__Container'>
+                <NavLink className='links' to='/'>
+                    Home
+                </NavLink>
+                <NavLink className='links' to='post'>
+                    Posts
+                </NavLink>
+                <NavLink className='links' to='users'>
+                    Users
+                </NavLink>
+            </nav>
+            <Outlet />
+        </>
     )
 }

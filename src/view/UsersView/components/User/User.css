@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 8px;
+    align-items: center;
+    padding: 10px;
+}
+
+.container__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image {
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.paragraph {
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.btn {
+    all: unset;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0c949ea4;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #000000;
+}

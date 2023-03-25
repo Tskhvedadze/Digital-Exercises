@@ -1,9 +1,21 @@
-a {
+.link__Container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px 3px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.links {
     all: unset;
     cursor: pointer;
     margin: 10px;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 1px;
 }
 
-a:hover {
+.links:hover {
     color: #ff440087;
 }
