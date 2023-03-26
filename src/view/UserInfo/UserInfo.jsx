@@ -7,13 +7,16 @@ import { Loading } from '../../components'
 import { UserAddress, UserAbout, UserCompany } from './components'
 
 export default function UserInfo() {
+    const [loading, setLoading] = useState(false)
     const [user, setUser] = useState([])
+
     const { id } = useParams()
 
     const getSingleUser = async () => {
+        setLoading(true)
         const resp = await axios(`https://dummyjson.com/users/${id}`)
-
         setUser([resp?.data])
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -24,7 +27,9 @@ export default function UserInfo() {
     return (
         <>
             <header className='user__info__header'>User Information</header>
-            {user ? (
+            {loading ? (
+                <Loading />
+            ) : (
                 <div className='user__info__page'>
                     <div className='user__info__content'>
                         {user.map((item) => (
@@ -47,8 +52,6 @@ export default function UserInfo() {
                         </div>
                     </div>
                 </div>
-            ) : (
-                <Loading />
             )}
         </>
     )
