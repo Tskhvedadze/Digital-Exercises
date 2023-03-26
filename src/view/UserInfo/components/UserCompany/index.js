@@ -1,0 +1,1 @@
+export { UserCompany } from './UserCompany'

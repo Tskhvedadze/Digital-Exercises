@@ -1,0 +1,6 @@
+.user__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}

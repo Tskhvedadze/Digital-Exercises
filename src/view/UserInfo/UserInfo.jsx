@@ -4,15 +4,16 @@ import axios from 'axios'
 
 import './UserInfo.css'
 import { Loading } from '../../components'
+import { UserAddress, UserAbout, UserCompany } from './components'
 
 export default function UserInfo() {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState([])
     const { id } = useParams()
 
     const getSingleUser = async () => {
         const resp = await axios(`https://dummyjson.com/users/${id}`)
 
-        setUser(resp?.data)
+        setUser([resp?.data])
     }
 
     useEffect(() => {
@@ -26,31 +27,23 @@ export default function UserInfo() {
             {user ? (
                 <div className='user__info__page'>
                     <div className='user__info__content'>
-                        <div className='user__about'>
-                            <p>
-                                FIRSTNAME: <span>{user?.firstName}</span>
-                            </p>
-                            <p>
-                                LASTNAME: <span>{user?.lastName}</span>
-                            </p>
-                            <p>
-                                AGE: <span>{user?.age}</span>
-                            </p>
-                        </div>
-                        <div className='user__address'>
-                            <p>
-                                STATE: <span>{user?.address.state}</span>
-                            </p>
-                            <p>
-                                CITY: <span>{user?.address.city}</span>
-                            </p>
-                            <p>
-                                postalCode:{' '}
-                                <span>{user?.address.postalCode}</span>
-                            </p>
-                        </div>
+                        {user.map((item) => (
+                            <UserAbout {...item} key={item.id} />
+                        ))}
+                        {user.map((item) => (
+                            <UserAddress {...item} key={item.id} />
+                        ))}
+                        {user.map((item) => (
+                            <UserCompany {...item} key={item.id} />
+                        ))}
                         <div className='user__image'>
-                            <img src={user?.image} alt={`${user?.firstName}`} />
+                            {user.map((item) => (
+                                <img
+                                    key={item.id}
+                                    src={item.image}
+                                    alt={`${user?.firstName}`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>

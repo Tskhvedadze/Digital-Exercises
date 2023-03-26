@@ -15,22 +15,13 @@
     justify-content: center;
     border: 1px solid;
     border-radius: 8px;
-    width: 95%;
+    width: 90%;
     margin: 30px auto auto auto;
 }
 
 .user__info__content {
     width: 100%;
-    padding: 8px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.user__about,
-.user__address {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
 }
