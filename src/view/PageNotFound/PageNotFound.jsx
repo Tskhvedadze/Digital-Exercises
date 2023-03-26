@@ -5,7 +5,7 @@ const PageNotFound = () => {
     return (
         <>
             <div className='not__found__container'>
-                <h2 className='title'>PageNotFound 404</h2>
+                <h2 className='title'>Page Not Found 404</h2>
                 <NavLink className='link' to='/'>
                     Home Page
                 </NavLink>
