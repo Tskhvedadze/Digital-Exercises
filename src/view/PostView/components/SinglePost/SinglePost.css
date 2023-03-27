@@ -1,0 +1,14 @@
+.content__container {
+    width: 80%;
+    margin: auto;
+}
+
+.content__title {
+    margin: 15px;
+    text-decoration: underline;
+    color: #dc143c;
+}
+
+.content__para {
+    padding: 20px;
+}

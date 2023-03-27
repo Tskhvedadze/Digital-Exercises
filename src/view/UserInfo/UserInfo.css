@@ -25,3 +25,24 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.back__toUser {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back__toUser button {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 10px 50px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.back__toUser button:hover {
+    background-color: #ff7700;
+    color: #fff;
+}
