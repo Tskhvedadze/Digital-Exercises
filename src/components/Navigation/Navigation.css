@@ -1,8 +1,9 @@
 .link__Container {
     display: flex;
+    width: 80%;
     justify-content: center;
     gap: 100px;
-    margin: 20px 3px;
+    margin: 20px auto;
     border: 1px solid;
     border-radius: 8px;
 }
@@ -16,6 +17,11 @@
     letter-spacing: 1px;
 }
 
-.links:hover {
+.links:hover,
+.links:active {
+    color: #ff440087;
+}
+
+.active {
     color: #ff440087;
 }
