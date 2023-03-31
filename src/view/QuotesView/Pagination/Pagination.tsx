@@ -5,7 +5,12 @@ export default function QuotePagination({
     totalQuotes,
     currentPage,
     setCurrentPage,
-}) {
+}: {
+    quotesPerPage: number
+    totalQuotes: number
+    currentPage: number
+    setCurrentPage: (page: number) => void
+}): JSX.Element {
     let pageNumbers = []
 
     for (let page = 1; page <= Math.ceil(totalQuotes / quotesPerPage); page++) {

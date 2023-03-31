@@ -2,7 +2,16 @@ import { Alert } from 'react-bootstrap'
 
 import { Loading } from '../../../components'
 
-const Quote = ({ quotes, loading }) => {
+type QuoteProps = {
+    quotes: {
+        id: string
+        author: string
+        quote: string
+    }[]
+    loading: boolean
+}
+
+const Quote = ({ quotes, loading }: QuoteProps) => {
     if (loading) {
         return <Loading />
     }

@@ -1,8 +1,11 @@
-import React from 'react'
-
 import './SinglePost.css'
 
-export const SinglePost = ({ title, body }) => {
+type SinglePostProps = {
+    title: string
+    body: string
+}
+
+export const SinglePost = ({ title, body }: SinglePostProps) => {
     return (
         <div className='content__container'>
             <h2 className='content__title'>{title}</h2>

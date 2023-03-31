@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
-import { Navigation } from './components'
+import { Navigation } from './components/index.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import QuotesView from './view/QuotesView/QuotesView'
-import PageNotFound from './view/PageNotFound/PageNotFound'
-import PostView from './view/PostView/PostView'
-import UserInfo from './view/UserInfo/UserInfo'
-import Users from './view/UsersView/UsersView'
+import PageNotFound from './view/PageNotFound/PageNotFound.tsx'
+import QuotesView from './view/QuotesView/QuotesView.tsx'
+import PostView from './view/PostView/PostView.tsx'
+import UserInfo from './view/UserInfo/UserInfo.jsx'
+import Users from './view/UsersView/UsersView.jsx'
 
 function App() {
     return (
