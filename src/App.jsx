@@ -1,13 +1,13 @@
 import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { MainLayout } from './layouts/MainLayout'
-import { Loading } from './components'
+import { MainLayout } from '@/layouts/MainLayout'
+import { Loading } from '@/components'
 
-const HomeView = lazy(() => import('./views/HomeView/HomeView'))
-const ProductView = lazy(() => import('./views/ProductView/ProductView'))
-const UsersView = lazy(() => import('./views/UsersView/UsersView'))
-const FourOhFour = lazy(() => import('./views/FourOhFour/FourOhFour'))
+const HomeView = lazy(() => import('@/views/HomeView/HomeView'))
+const ProductView = lazy(() => import('@/views/ProductView/ProductView'))
+const UsersView = lazy(() => import('@/views/UsersView/UsersView'))
+const FourOhFour = lazy(() => import('@/views/FourOhFour/FourOhFour'))
 
 function App() {
     return (

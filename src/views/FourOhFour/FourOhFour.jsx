@@ -10,7 +10,6 @@ function FourOhFour() {
             </h1>
             <div className='text-center '>
                 <button
-                    type='button'
                     className='btn btn-outline-danger'
                     onClick={() => navigate('/')}
                 >
