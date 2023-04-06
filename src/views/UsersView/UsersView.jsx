@@ -7,17 +7,17 @@ import { Loading } from '@/components'
 import { UserDetailModal } from './components/UserDetailModal'
 import { useFetchUsers } from './hooks/useFetchUsers'
 
-const userModalInitial = { show: false, payload: '' }
+const userModalInit = { show: false, payload: '' }
 
 function UsersView() {
     const { users, loadingUsers } = useFetchUsers()
-    const [userModal, setUserModal] = useState(userModalInitial)
+    const [userModal, setUserModal] = useState(userModalInit)
 
     return (
         <Container>
             <UserDetailModal
                 {...userModal}
-                onHide={() => setUserModal(userModalInitial)}
+                onHide={() => setUserModal(userModalInit)}
             />
             <Row className='g-3'>
                 {loadingUsers ? (
