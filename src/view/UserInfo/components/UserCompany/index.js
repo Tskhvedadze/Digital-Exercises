@@ -1,1 +1,0 @@
-export { UserCompany } from './UserCompany'
