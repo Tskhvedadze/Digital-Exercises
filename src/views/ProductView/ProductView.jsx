@@ -1,3 +1,5 @@
-export function ProductView() {
-  return <div>ProductView</div>;
+function ProductView() {
+    return <div>ProductView</div>
 }
+
+export default ProductView

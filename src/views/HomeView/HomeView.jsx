@@ -1,3 +1,5 @@
-export function HomeView() {
-  return <div>HomeView</div>;
+function HomeView() {
+    return <div>HomeView</div>
 }
+
+export default HomeView

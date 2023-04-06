@@ -3,7 +3,7 @@ import { Container, Card, Button } from 'react-bootstrap'
 import { UserDetailModal } from './components/UserDetailModal/UserDetailModal'
 import { useFetchUsers } from './hooks/useFetchUsers'
 
-export function UsersView() {
+function UsersView() {
     const { users } = useFetchUsers()
 
     const userModalInitial = { show: false, payload: '' }
@@ -43,3 +43,5 @@ export function UsersView() {
         </Container>
     )
 }
+
+export default UsersView
