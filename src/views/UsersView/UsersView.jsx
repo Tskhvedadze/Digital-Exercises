@@ -13,7 +13,6 @@ function UsersView() {
     const { users, loadingUsers } = useFetchUsers()
     const [userModal, setUserModal] = useState(userModalInit)
 
-    console.log(users)
     return (
         <Container className='mb-3'>
             <UserDetailModal

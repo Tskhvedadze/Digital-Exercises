@@ -5,7 +5,7 @@ export function useFetchUsers() {
     const [users, setUsers] = useState([])
     const [loadingUsers, setLoadingUsers] = useState(false)
 
-    const get_users = async () => {
+    const getUsers = async () => {
         setLoadingUsers(true)
         const response = await axios.get('https://dummyjson.com/users')
         setUsers(response?.data?.users)
@@ -13,7 +13,7 @@ export function useFetchUsers() {
     }
 
     useEffect(() => {
-        get_users()
+        getUsers()
     }, [])
 
     return { users, loadingUsers }
